@@ -27,7 +27,30 @@ END
 #########################
 
 function show_help() {
-  echo "HELP: INSTRUCTIONS TO PLAY THE GAME"
+  cat <<END
+
+  ===== HOW TO PLAY NUMBERJACK =====
+
+  1. Hit 1 in the main menu to start a game.
+  2. Pick any number between 0 and 9.
+  3. The game shuffles the digits 0-9 and shows them in a row,
+     with their positions (1-10) printed underneath.
+  4. Find your number in the row and type its position.
+     You have 5 seconds to answer.
+  5. Right answer: you score a point, the digits are shuffled
+     again, and you guess again with the same number.
+  6. Wrong answer or no answer in time: GAME OVER, and your
+     final score is shown.
+
+  Example:
+    Your number:  4
+    7 2 4 9 0 1 5 3 8 6
+    1 2 3 4 5 6 7 8 9 10
+    The 4 is at position 3, so type 3.
+
+  Hit 3 in the main menu to exit.
+
+END
 }
 
 #########################
